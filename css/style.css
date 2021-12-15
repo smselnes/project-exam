@@ -1,0 +1,710 @@
+/*============Variables============*/
+:root {
+  --blue: #b1e0e7;
+  --light: #fffaf0;
+  --green: #7fffd4;
+  --dark: #808000;
+  --tan: #faead6;
+}
+
+/*============Global Styling============*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--light);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--green);
+  transition: 0.7s;
+}
+
+button:hover {
+  background-color: var(--light);
+}
+
+a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-size: 0.7em;
+  text-align: center;
+  max-width: 75%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ============Header, Navigation============*/
+
+header {
+  background-color: var(--tan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+}
+
+.logo img {
+  max-width: 80px;
+}
+
+header h1 {
+  font-size: 1.1em;
+}
+
+.tagline {
+  font-size: 0.6rem;
+  max-width: 100px;
+}
+
+nav {
+  background-color: var(--tan);
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0px 5px;
+  padding: 30px 0px 0px 0px;
+  justify-content: space-evenly;
+}
+
+nav li {
+  padding: 5px;
+}
+
+nav a:hover {
+  color: var(--dark);
+}
+
+.hidden {
+  display: none;
+}
+
+.dont-hide {
+  display: flex;
+}
+
+.active {
+  background-color: var(--light);
+  color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ============Footer related============ */
+
+footer {
+  background-color: var(--tan);
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.signature {
+  border-top: 1px solid var(--dark);
+  max-width: 50%;
+  margin-top: 20px;
+}
+
+/* ============Hamburger menu============*/
+
+#hamburger-menu {
+  display: none;
+}
+
+#click-menu {
+  color: black;
+  font-size: 2em;
+  position: absolute;
+  right: 10px;
+  top: 10%;
+}
+
+#click-menu:hover {
+  color: var(--green);
+  cursor: pointer;
+}
+
+/* ============Home Page============ */
+
+.home-content {
+  text-align: center;
+}
+
+.main-image {
+  max-width: 70%;
+}
+
+.home-content p {
+  padding: 8px;
+  text-align: left;
+}
+
+.latest-posts {
+  display: flex;
+}
+
+.blog-date {
+  padding: 2px;
+  font-size: 0.8em;
+}
+
+.carousel {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4%;
+  margin: 5%;
+}
+
+.carousel h3,
+.blogs h3 {
+  font-size: 1.5em;
+}
+
+.blogs p {
+  font-size: 1em;
+}
+
+.carousel img {
+  max-width: 95%;
+}
+
+.slider {
+  padding-top: 5px;
+  box-shadow: 0px 0px 4px 1px;
+  background-color: var(--blue);
+}
+
+.slider:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.arrows {
+  display: flex;
+  margin-top: 8%;
+  justify-content: space-evenly;
+}
+
+.previous-post,
+.next-post {
+  padding: 1%;
+}
+
+.previous-post:hover,
+.next-post:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+/* ============Blogs overview page============*/
+
+.main-blogs {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 3%;
+  margin: 3%;
+}
+
+.main-blogs div {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 2%;
+}
+
+.blogs {
+  box-shadow: 0px 0px 4px 1px;
+  background-color: var(--blue);
+}
+
+.blogs:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.blogs img {
+  max-width: 100%;
+}
+
+.more-posts {
+  margin: auto;
+  width: 25%;
+  height: 40px;
+  display: none;
+  background-color: var(--green);
+  align-items: center;
+}
+
+.more-posts:hover {
+  transform: scale(1.2);
+  background-color: var(--light);
+}
+
+/* ============Blog Specific content============*/
+
+.container {
+  display: grid;
+  text-align: center;
+}
+
+.container div {
+  display: grid;
+}
+
+.wp-block-image img {
+  width: 217px;
+  height: 150px;
+}
+
+.wp-block-image img:hover,
+.main-content img {
+  cursor: pointer;
+}
+
+.wp-block-image figcaption {
+  font-size: 0.6em;
+  margin: auto;
+  font-style: italic;
+  width: 80%;
+}
+
+.main-content {
+  align-items: center;
+}
+
+.main-content img {
+  width: 200px;
+  height: 200px;
+}
+
+.text-block {
+  padding: 4%;
+  width: 60%;
+  text-align: left;
+}
+
+.blogs-button,
+.to-top-button {
+  border: 1px solid var(--dark);
+  padding: 10px;
+}
+
+.blogs-button:hover,
+.to-top-button:hover {
+  background-color: var(--green);
+}
+
+/* ============Modal============*/
+
+.modal {
+  transform: scale(1.2);
+  justify-self: center;
+  z-index: 2;
+  position: relative;
+  transition: 0.8s;
+  border: 2px solid var(--blue);
+}
+
+.modalImg:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
+/* ============Contact page============*/
+
+.contact-intro {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-intro img {
+  max-width: 90%;
+  margin-top: 15px;
+}
+.contact-form {
+  display: grid;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+.contact-form span {
+  font-size: 0.6em;
+}
+
+input,
+textarea {
+  width: 60%;
+  margin: auto;
+  border-radius: 3px;
+  padding: 2%;
+}
+
+label {
+  margin-top: 2%;
+}
+
+.textarea {
+  margin-top: 15px;
+}
+
+#submit {
+  margin: 1%;
+  justify-self: center;
+  max-width: 30%;
+}
+
+.thankyou-message {
+  display: none;
+  max-width: 30%;
+}
+
+.added-class {
+  position: relative;
+  align-self: center;
+}
+
+.flight {
+  display: none;
+  animation: fly 5s linear infinite;
+}
+
+/* ============About page============*/
+
+.about-section-top {
+  display: grid;
+}
+
+.about-section-top img {
+  max-width: 75%;
+  margin: auto;
+}
+
+.about-section-top h1 {
+  font-size: 1.5em;
+}
+
+.about-section-top p {
+  line-height: 20px;
+  padding: 4%;
+  text-align: left;
+}
+
+/* ============Animations and transitions============*/
+
+.loader {
+  text-align: center;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
+  animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fly {
+  0% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: 90%;
+    opacity: 0;
+  }
+}
+
+/* ============Errors============*/
+
+.error-container {
+  display: none;
+  margin: 10% 0;
+}
+
+#mail-error,
+#name-error,
+#subject-error,
+#message-error {
+  display: none;
+}
+
+.error-output {
+  border: 1px solid red;
+  background-color: pink;
+  position: absolute;
+  justify-self: center;
+  padding: 1%;
+}
+
+.form-error {
+  padding: 2px;
+}
+
+.contact-form span {
+  color: red;
+}
+
+/* ============Media Queries============*/
+
+@media (min-width: 500px) {
+  header h1 {
+    font-size: 1.3em;
+  }
+
+  .tagline {
+    font-size: 0.9em;
+    max-width: 150px;
+  }
+
+  nav ul {
+    padding: 0px;
+  }
+
+  p,
+  .carousel h3,
+  .blogs h3 {
+    font-size: 1em;
+  }
+
+  .container img {
+    width: 440px;
+    height: 305px;
+  }
+
+  .main-content img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .main-blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 33%;
+  }
+
+  .main-blogs {
+    margin-bottom: 50%;
+  }
+
+  .text-block {
+    width: 80%;
+    padding: 6%;
+  }
+
+  a {
+    font-size: 1em;
+  }
+
+  .contact-intro {
+    max-width: 450px;
+    margin: auto;
+  }
+
+  .form-error {
+    font-size: 0.8em;
+  }
+
+  #mail-error,
+  #name-error,
+  #subject-error,
+  #message-error {
+    font-size: 0.7em;
+  }
+
+  input,
+  .textarea {
+    width: 344px;
+  }
+
+  input[type="submit"] {
+    width: 134px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    max-width: 140px;
+  }
+
+  header {
+    justify-content: space-between;
+    padding: 2%;
+  }
+
+  .header-text {
+    flex: auto;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .tagline {
+    font-size: 1.5em;
+    max-width: 40%;
+  }
+
+  #click-menu {
+    display: none;
+  }
+
+  .hidden {
+    display: flex;
+  }
+
+  a,
+  .carousel h3,
+  .blogs h3 {
+    font-size: 1.2em;
+  }
+
+  .previous-post,
+  .next-post {
+    font-size: 1.5em;
+  }
+
+  .main-blogs div {
+    width: 80%;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  .container img {
+    width: 60%;
+    height: 100%;
+  }
+
+  .main-content img {
+    width: 450px;
+    height: 450px;
+  }
+
+  .wp-block-image figcaption {
+    font-size: 0.8em;
+  }
+
+  .carousel {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .form-error {
+    bottom: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .logo img {
+    max-width: 200px;
+  }
+
+  nav li {
+    padding: 20px;
+  }
+
+  .wp-block-image figcaption {
+    max-width: 70%;
+  }
+
+  .text-block {
+    width: 60%;
+  }
+
+  a {
+    font-size: 1.7em;
+  }
+
+  footer {
+    padding: 50px;
+  }
+
+  .signature {
+    margin-top: 50px;
+  }
+
+  .main-blogs {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20%;
+  }
+
+  .blogs h3 {
+    font-size: 0.8em;
+  }
+
+  .contactpage {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .contact-intro {
+    margin: 0;
+  }
+
+  .contact-form {
+    margin-top: 5%;
+  }
+
+  .about-section-top p {
+    max-width: 55%;
+    line-height: 30px;
+    padding: 2%;
+  }
+
+  .about-section-top h1,
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .thankyou-message {
+    max-width: 100%;
+    margin-top: 100%;
+  }
+}

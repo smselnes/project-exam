@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/982175d43a.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact me to discuss anything related to traveling and exploring other places."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Selnes Travel Blog | Contact me</title>
+    <!-- Hotjar Tracking Code for https://selnes-travelblog.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2721186, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="/images/selnes_travelblog_logo.png"
+          alt="my personal logo showing an airplane in front of a globe"
+        />
+      </div>
+      <div class="header-text">
+        <h1>My passion for traveling</h1>
+        <p class="tagline">a travel blog by Ståle Marius Selnes</p>
+      </div>
+      <label for="hamburger-menu" id="click-menu">
+        <i class="fas fa-bars"></i>
+      </label>
+      <input type="checkbox" id="hamburger-menu" />
+    </header>
+    <nav>
+      <ul class="navigation hidden">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main class="contactpage">
+      <div class="contact-intro">
+        <h1>Hey!</h1>
+        <h2>Feel free to get in touch</h2>
+        <p class="text-block">
+          I would love to share some experiences from traveling. Let it be
+          anything from food, places to sleep or local sights worth visiting.
+        </p>
+        <img
+          src="/images/contact1.jpg"
+          alt="male guy with sunglasses leaning on a bridge fence in front of large river"
+        />
+      </div>
+      <form class="contact-form" method="GET">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="please enter your name"
+        />
+        <span id="name-error">*Minimum 6 characters</span>
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email address"
+        />
+        <span id="mail-error">*Not a valid email format</span>
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Message subject"
+        />
+        <span id="subject-error">*Minimum 16 characters</span>
+        <textarea
+          class="textarea"
+          name="enquiry"
+          id="message"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <span id="message-error">
+          *The message needs to contain atleast 25 characters.
+        </span>
+        <input type="submit" name="submit" id="submit" />
+        <p class="form-error"></p>
+      </form>
+      <div>
+        <p class="thankyou-message">Thank you for writing me.</p>
+        <span class="flight">&#9992;</span>
+      </div>
+    </main>
+    <footer>
+      <p class="signature">Website created by Selnes development</p>
+    </footer>
+
+    <script src="/js/menu.js"></script>
+    <script src="/js/contact.js"></script>
+  </body>
+</html>
