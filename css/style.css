@@ -22,13 +22,15 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-button {
+button,
+#submit {
   cursor: pointer;
   background-color: var(--green);
   transition: 0.7s;
 }
 
-button:hover {
+button:hover,
+#submit:hover {
   background-color: var(--light);
 }
 
@@ -49,6 +51,8 @@ h1 {
   font-size: 1.5em;
 }
 
+#headline,
+#tagline,
 h1,
 h2,
 h3 {
@@ -61,21 +65,18 @@ h3 {
 header {
   background-color: var(--tan);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 4%;
 }
 
-.logo img {
-  max-width: 80px;
-}
-
-header h1 {
+#headline {
   font-size: 1.1em;
+  margin: 15px;
 }
 
-.tagline {
-  font-size: 0.6rem;
+#tagline {
+  font-size: 0.7rem;
   max-width: 100px;
 }
 
@@ -140,8 +141,8 @@ footer {
   color: black;
   font-size: 2em;
   position: absolute;
-  right: 10px;
-  top: 10%;
+  right: 20px;
+  top: 6%;
 }
 
 #click-menu:hover {
@@ -350,14 +351,12 @@ footer {
 
 /* ============Contact page============*/
 
-.contact-intro {
-  margin-bottom: 40px;
+.contactpage {
   text-align: center;
 }
 
-.contact-intro img {
-  max-width: 90%;
-  margin-top: 15px;
+.contactpage img {
+  max-width: 60%;
 }
 .contact-form {
   display: grid;
@@ -450,7 +449,7 @@ label {
 
 @keyframes fly {
   0% {
-    margin-left: 10%;
+    margin-right: 90%;
     opacity: 1;
   }
 
@@ -493,11 +492,11 @@ label {
 /* ============Media Queries============*/
 
 @media (min-width: 500px) {
-  header h1 {
+  #headline {
     font-size: 1.3em;
   }
 
-  .tagline {
+  #tagline {
     font-size: 0.9em;
     max-width: 150px;
   }
@@ -568,24 +567,11 @@ label {
 }
 
 @media (min-width: 768px) {
-  .logo img {
-    max-width: 140px;
-  }
-
-  header {
-    justify-content: space-between;
-    padding: 2%;
-  }
-
-  .header-text {
-    flex: auto;
-  }
-
-  header h1 {
+  #headline {
     font-size: 2em;
   }
 
-  .tagline {
+  #tagline {
     font-size: 1.5em;
     max-width: 40%;
   }
@@ -641,10 +627,6 @@ label {
 }
 
 @media (min-width: 1000px) {
-  .logo img {
-    max-width: 200px;
-  }
-
   nav li {
     padding: 20px;
   }
@@ -678,18 +660,15 @@ label {
     font-size: 0.8em;
   }
 
-  .contactpage {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-  }
-
-  .contact-intro {
-    margin: 0;
-  }
-
   .contact-form {
     margin-top: 5%;
+  }
+
+  #mail-error,
+  #name-error,
+  #subject-error,
+  #message-error {
+    font-size: 1em;
   }
 
   .about-section-top p {
